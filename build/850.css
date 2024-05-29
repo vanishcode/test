@@ -1,0 +1,168 @@
+/**
+ * Convert a font size to a dynamic font size.
+ * Fonts that participate in Dynamic Type should use
+ * dynamic font sizes.
+ * @param size - The initial font size including the unit (i.e. px or pt)
+ * @param unit (optional) - The unit to convert to. Use this if you want to
+ * convert to a unit other than $baselineUnit.
+ */
+/**
+ * Convert a font size to a dynamic font size but impose
+ * a maximum font size.
+ * @param size - The initial font size including the unit (i.e. px or pt)
+ * @param maxScale - The maximum scale of the font (i.e. 2.5 for a maximum 250% scale).
+ * @param unit (optional) - The unit to convert the initial font size to. Use this if you want to
+ * convert to a unit other than $baselineUnit.
+ */
+/**
+ * Convert a font size to a dynamic font size but impose
+ * a minimum font size.
+ * @param size - The initial font size including the unit (i.e. px or pt)
+ * @param minScale - The minimum scale of the font (i.e. 0.8 for a minimum 80% scale).
+ * @param unit (optional) - The unit to convert the initial font size to. Use this if you want to
+ * convert to a unit other than $baselineUnit.
+ */
+/**
+ * Convert a font size to a dynamic font size but impose
+ * maximum and minimum font sizes.
+ * @param size - The initial font size including the unit (i.e. px or pt)
+ * @param minScale - The minimum scale of the font (i.e. 0.8 for a minimum 80% scale).
+ * @param maxScale - The maximum scale of the font (i.e. 2.5 for a maximum 250% scale).
+ * @param unit (optional) - The unit to convert the initial font size to. Use this if you want to
+ * convert to a unit other than $baselineUnit.
+ */
+/**
+ * A heuristic that applies CSS to tablet
+ * viewports.
+ *
+ * Usage:
+ * @include tablet-viewport() {
+ *   :host {
+ *     background-color: green;
+ *   }
+ * }
+ */
+/**
+   * A heuristic that applies CSS to mobile
+   * viewports (i.e. phones, not tablets).
+   *
+   * Usage:
+   * @include mobile-viewport() {
+   *   :host {
+   *     background-color: blue;
+   *   }
+   * }
+   */
+html {
+  --cpsl-default-font: "Helvetica", sans-serif;
+  --cpsl-default-dynamic-font: -apple-system-body;
+  --cpsl-font-family: var(--cpsl-default-font);
+}
+
+body.backdrop-no-scroll {
+  overflow: hidden;
+}
+
+:root {
+  --cpsl-color-black: #000000;
+  --cpsl-color-white: #ffffff;
+  --cpsl-color-modal-surface-main: #ffffff;
+  --cpsl-color-modal-surface-footer: #fafafa;
+  --cpsl-color-modal-border: #fafafa;
+  --cpsl-color-tile-button-surface-default: #ffffff;
+  --cpsl-color-tile-button-surface-hover: #fafafa;
+  --cpsl-color-tile-button-border: #f5f5f5;
+  --cpsl-color-input-surface-disabled: #fafafa;
+  --cpsl-color-input-surface-default: #ffffff;
+  --cpsl-color-input-border-placeholder: #e0e0e0;
+  --cpsl-color-input-border-active: #808080;
+  --cpsl-color-input-border-error: #f04438;
+  --cpsl-color-primary-button-surface-default: #1f1f1f;
+  --cpsl-color-primary-button-surface-hover: #3f3f3f;
+  --cpsl-color-primary-button-surface-pressed: #121212;
+  --cpsl-color-primary-button-surface-disabled: #c0c0c0;
+  --cpsl-color-primary-button-border-default: #3f3f3f;
+  --cpsl-color-primary-button-border-disabled: #c0c0c0;
+  --cpsl-color-primary-button-outline: #c0c0c0;
+  --cpsl-color-secondary-button-surface-default: #fafafa;
+  --cpsl-color-secondary-button-surface-hover: #e0e0e0;
+  --cpsl-color-secondary-button-surface-pressed: #c0c0c0;
+  --cpsl-color-secondary-button-surface-disabled: #c0c0c0;
+  --cpsl-color-secondary-button-border-default: #e0e0e0;
+  --cpsl-color-secondary-button-border-disabled: #c0c0c0;
+  --cpsl-color-secondary-button-outline: #c0c0c0;
+  --cpsl-color-divider: #e0e0e0;
+  --cpsl-color-text-primary: #121212;
+  --cpsl-color-text-secondary: #a2a2a2;
+  --cpsl-color-text-subtle: #c0c0c0;
+  --cpsl-color-text-inverted: #fafafa;
+  --cpsl-color-text-error: #f04438;
+  --cpsl-color-background-primary: #ffffff;
+  --cpsl-color-background-subtle: #fafafa;
+  --cpsl-color-foreground-primary: #121212;
+  --cpsl-color-foreground-secondary: #3f3f3f;
+  --cpsl-color-foreground-ternary: #808080;
+  --cpsl-color-foreground-quarternary: #c0c0c0;
+  --cpsl-color-foreground-quinary: #e0e0e0;
+  --cpsl-color-foreground-senary: #fafafa;
+  --cpsl-color-alert-surface-error: #fee4e2;
+  --cpsl-color-alert-border-error: #f97066;
+  --cpsl-color-alpha-black-2: rgba(0, 0, 0, 0.0196078431);
+  --cpsl-color-alpha-black-4: rgba(0, 0, 0, 0.0392156863);
+  --cpsl-color-alpha-black-8: rgba(0, 0, 0, 0.0784313725);
+  --cpsl-color-alpha-black-10: rgba(0, 0, 0, 0.1019607843);
+  --cpsl-color-alpha-black-16: rgba(0, 0, 0, 0.1607843137);
+  --cpsl-color-alpha-black-24: rgba(0, 0, 0, 0.2392156863);
+  --cpsl-color-alpha-black-25: rgba(0, 0, 0, 0.2509803922);
+  --cpsl-color-alpha-black-32: rgba(0, 0, 0, 0.3215686275);
+  --cpsl-color-alpha-black-48: rgba(0, 0, 0, 0.4784313725);
+  --cpsl-color-alpha-black-50: rgba(0, 0, 0, 0.5019607843);
+  --cpsl-color-alpha-white-4: rgba(255, 255, 255, 0.0392156863);
+  --cpsl-color-alpha-white-25: rgba(255, 255, 255, 0.2509803922);
+  --cpsl-border-radius-input: 8px;
+  --cpsl-border-radius-alert: 8px;
+  --cpsl-border-radius-primary-button: 8px;
+  --cpsl-border-radius-secondary-button: 8px;
+  --cpsl-border-radius-tile-button: 8px;
+  --cpsl-border-radius-modal: 16px;
+  --cpsl-border-radius-pill: 1000px;
+  --cpsl-border-radius-qr-code: 24px;
+  --cpsl-border-radius-info-box: 8px;
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url(/build/fonts/Inter-VariableFont_slnt,wght.ttf) format('truetype');
+}
+
+html {
+  --cpsl-default-font: 'Inter', sans-serif;
+}
+
